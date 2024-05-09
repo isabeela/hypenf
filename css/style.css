@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Walter+Turncoat&display=swap');
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0eeee;
+}
+
+h1 {
+    font-size: 1.9rem;
+}
+
+h1, h2 {
+    font-family: 'Rubik', sans-serif;
+    color: #021a3d;
+    text-align: center;
+    padding: 5px auto;
+}
+
+h3 {
+    padding: 0 5px;
+}
+
+span {
+    color: red;
+}
+
+
+label {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    padding: 0.5rem;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    width: 90%;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+p {
+    font-size: 16px;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 10px 35px 0 0;
+    text-align: right;
+    flex-direction: row-reverse;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    color: #021a3d;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-weight: 1rem;
+    
+}
+
+.aprender-nf {
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+.aprender-nf > p {
+    font-size: 1.2rem;
+}
+
+.aprender-nf > div {
+    margin: 10px; 
+}
+
+.texto {
+    width: 30%;
+    padding: 70px;
+}
+
+.container {
+    border: 1px solid #5a5a5a;
+    padding: 20px;
+    margin: 20px auto;
+    width: 30%;
+}
+
+#relatorio {
+    padding: 5px;
+    text-align: center;
+    margin: 20px auto;
+    width: 50%;
+}
+
+#relatorio table {
+  width: 65%;
+  border-collapse: collapse;
+  margin: 0 auto;
+    
+}
+
+#relatorio th, #relatorio td {
+  padding: 5px;
+  text-align: center;
+}
+
+#relatorio h2 {
+  font-size: 1.2rem;
+}
+
+.btn-relatorios {
+    display: none;
+    margin: 0 auto;
+    padding: 0 0 30px 0;
+    text-align: center;
+}
+
+#botao-gerar, #botao-enviar, #voltar {
+    margin: 0 auto;
+    border: none;
+    background-color: #021a3d;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#btn-relatorio {
+    margin: 0 auto;
+    border: none;
+    background-color: #021a3d;
+    color: #fff;
+    border-radius: 5px;
+}
+
+legend {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro {
+    margin: 50px 0 0 0;
+}
+
+.intro > p {
+    text-align: center;
+}
+
+.passo-a-passo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.passo-a-passo > div {
+    margin: 0 10px;
+   justify-content: center;
+}
+
+.adesivo {
+    text-align: center;
+    margin: 30px 0 -50px 0;
+    position: relative;
+    z-index: 9999;
+
+}
+
+.adesivo > img {
+    width: 120px;
+}
+
+.papel {
+    margin: 35px auto;
+    background-color: #FDFDC9;
+    height:23em;
+    width:23em;
+    padding: 5px 20px;
+    position: relative;
+}
+
+.papel > h3 {
+    font-family: "Walter Turncoat", cursive;
+}
+
+ .papel > p > b  {
+    font-family: "Borel", cursive;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+} 
+
+.botoes {
+    text-align: center;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.botoes > a {
+    text-decoration: none;
+}
+
+.btn-ajuda {
+    display: flex;
+    flex-direction: column-reverse;
+    position: fixed;
+    bottom: 5px;
+}
+
+.contato-email {
+    font-family:  "Walter Turncoat", cursive;
+    font-size: 1.2rem;
+}
