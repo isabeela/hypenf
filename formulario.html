@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <h1> Enviar Nota Fiscal</h1>
-        <form id="formulario" method="post">
+         <form id="formulario" action="/upload" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="nome">Nome Completo:</label> <span> * </span> <br>
                 <input type="text" class="form-control" id="nome" required>
@@ -193,8 +193,8 @@
                 <input type="file" name="file" accept="application/pdf" required />
             </div>
             <button type="submit" id="botao-enviar"> Enviar Nota </button>
-
     </div>
+</form>
 
   <script src="script.js"></script>
 
