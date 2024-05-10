@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var nome = document.getElementById('nome').value;
     console.log(nome)
     var nome_projeto_data = `${nome}`;
-    document.getElementById('nome_projeto').value = nome;
-
     var formData = new FormData(this);
 
     var xhr = new XMLHttpRequest();
