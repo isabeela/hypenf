@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Preenche o campo nome_projeto com os dados do nome e projeto selecionado
     var nome = document.getElementById('nome').value;
+    console.log(nome)
     var nome_projeto_data = `${nome}`;
     document.getElementById('nome_projeto').value = nome;
 
