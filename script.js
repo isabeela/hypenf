@@ -4,10 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Preenche o campo nome_projeto com os dados do nome e projeto selecionado
     var nome = document.getElementById('nome').value;
-    var projeto = [...document.querySelectorAll('input[type=checkbox]:checked')].map(el => el.name).join('_');
-    var data = new Date().toISOString().slice(0, 10); // Data atual no formato YYYY-MM-DD
-    var nome_projeto_data = `${nome}_${projeto}_${data}`;
-    document.getElementById('nome_projeto').value = nome_projeto_data;
+    var nome_projeto_data = `${nome}`;
+    document.getElementById('nome_projeto').value = nome;
 
     var formData = new FormData(this);
 
