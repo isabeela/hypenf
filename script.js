@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var email = document.getElementById('email').value;
     document.getElementById('emailHidden').value = email;
+     console.log(emailHidden)
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://af9618c4-a602-4633-ade9-8b7152b7c1a1-00-od1vbydpfhbj.riker.replit.dev/upload'); // Substitua pelo URL do seu servidor no Replit
