@@ -11,6 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
     var email = document.getElementById('email').value;
     console.log(email)
 
+    const projetos = document.querySelectorAll('input[type="checkbox"]');
+      for (let i = 0; i < projetos.length; i++) {
+        if (checkboxes[i].checked) {
+          console.log(checkboxes[i].value);
+        }
+      }
+
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://af9618c4-a602-4633-ade9-8b7152b7c1a1-00-od1vbydpfhbj.riker.replit.dev/upload'); // Substitua pelo URL do seu servidor no Replit
     xhr.onload = function() {
