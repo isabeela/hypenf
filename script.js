@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var nome_projeto_data = `${nome}`;
     var formData = new FormData(this);
 
+    var email = document.getElementById('email').value;
+    document.getElementById('emailHidden').value = email;
+
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://af9618c4-a602-4633-ade9-8b7152b7c1a1-00-od1vbydpfhbj.riker.replit.dev/upload'); // Substitua pelo URL do seu servidor no Replit
     xhr.onload = function() {
