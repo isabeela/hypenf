@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var email = document.getElementById('email').value;
     console.log(email)
 
-    const projetos = document.querySelectorAll('input[type="checkbox"].checked').value;
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    const projetos = Array.from(checkboxes).map(checkbox => checkbox.value);
+    console.log(projetos);
+
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://af9618c4-a602-4633-ade9-8b7152b7c1a1-00-od1vbydpfhbj.riker.replit.dev/upload'); // Substitua pelo URL do seu servidor no Replit
