@@ -15,6 +15,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const projetos = Array.from(checkboxes).map(checkbox => checkbox.value);
     console.log(projetos);
 
+    document.getElementById('formulario').addEventListener('submit', function(event) {
+      const projetos = document.querySelectorAll('input[type="checkbox"]:checked');
+      if (projetos.length === 0) {
+        alert('Selecione pelo menos um projeto.');
+        event.preventDefault(); // Impede o envio do formulário
+      }
+    });
+
+
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://af9618c4-a602-4633-ade9-8b7152b7c1a1-00-od1vbydpfhbj.riker.replit.dev/upload'); // Substitua pelo URL do seu servidor no Replit
