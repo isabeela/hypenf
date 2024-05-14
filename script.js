@@ -16,13 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(projetos);
 
     document.getElementById('formulario').addEventListener('submit', function(event) {
-      const projetos = document.querySelectorAll('input[type="checkbox"]:checked');
-      if (projetos.length === 0) {
-        alert('Selecione pelo menos um projeto.');
-        event.preventDefault(); // Impede o envio do formulário
-      }
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][name="projeto"]:checked');
+        if (checkboxes.length === 0) {
+            alert('Selecione pelo menos um projeto.');
+            event.preventDefault();
+        }
     });
-
 
 
     var xhr = new XMLHttpRequest();
