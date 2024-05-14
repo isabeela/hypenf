@@ -209,6 +209,15 @@
     // Atualiza o valor no campo de entrada
     input.value = value;
 }
+
+    document.getElementById('formulario').addEventListener('submit', function(event) {
+        const projetosSelecionados = document.querySelectorAll('input[type="checkbox"]:checked');
+        if (projetosSelecionados.length === 0) {
+            alert('Selecione pelo menos um projeto.');
+            event.preventDefault(); // Evita o envio do formulário se a validação falhar
+        }
+    });
+
 </script>
 
 
