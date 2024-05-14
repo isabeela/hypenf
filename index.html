@@ -108,8 +108,19 @@
             <button id="botao-enviar" title="Baixar Instruções"> Baixar Instruções </button>
         </a>
     </div>
-
     
+<script>
+    document.getElementById('formulario').addEventListener('submit', function(event) {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][name="projeto"]:checked');
+    if (checkboxes.length === 0) {
+        alert('Selecione pelo menos um projeto.');
+        event.preventDefault();
+    }
+});
+    
+</script>
+    
+
    
  
 </body>
