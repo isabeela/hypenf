@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var email = document.getElementById('email').value;
     console.log(email)
 
+    var salario = document.getElementById('salario').value;
+
     const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
     const projetos = Array.from(checkboxes).map(checkbox => checkbox.value);
     console.log(projetos);
