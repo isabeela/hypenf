@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
       formData.append('salario', salario);
       formData.append('projetos', projetos.join(','));
 
-      fetch('https://hype-nf-hypeadm/upload', {
+      fetch('http://localhost:3000/upload', {
         method: 'POST',
         body: formData,
       })
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
  
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://hype-nf-hypeadm/upload'); // Substitua pelo URL do seu servidor no Replit
+    xhr.open('POST', 'https://af9618c4-a602-4633-ade9-8b7152b7c1a1-00-od1vbydpfhbj.riker.replit.dev/upload'); // Substitua pelo URL do seu servidor no Replit
     xhr.onload = function() {
       if (xhr.status === 200) {
         alert(xhr.responseText); // Exibe a mensagem de sucesso
