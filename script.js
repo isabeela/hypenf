@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
       formData.append('salario', salario);
       formData.append('projetos', projetos.join(','));
 
-      fetch('http://localhost:80/upload', {
+      fetch('http://localhost:3000/upload', {
         method: 'POST',
         body: formData,
       })
