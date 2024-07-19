@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
       formData.append('salario', salario);
       formData.append('projetos', projetos.join(','));
 
-      fetch('http://localhost:3000/upload', {
+      fetch('https://hype-nf-hypeadm/upload', {
         method: 'POST',
         body: formData,
       })
