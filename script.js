@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .catch(error => {
         console.error('Erro:', error);
-        alert('Erro ao enviar o formulário');
+
       });
  
 
