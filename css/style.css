@@ -73,20 +73,31 @@ p {
 
 nav {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 0;
-    margin: 10px 35px 0 0;
+    margin: auto;
     text-align: right;
-    flex-direction: row-reverse;
+    
 }
 
 ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    margin: auto;
 }
 
 li {
-    margin: 10px;
+    width: max-content;
+}
+
+li > a {
+    margin: 3px 10px;
+}
+
+nav > div > img {
+    width: 7%;
+    float: left;
+    margin: 20px;
 }
 
 a {
