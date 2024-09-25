@@ -142,6 +142,12 @@ a:hover {
     margin: 20px auto;
 }
 
+.mes-exp {
+    font-size: 0.9rem;
+    color: #000000;
+    margin: 0 auto;
+}
+
 #relatorio {
     padding: 5px;
     text-align: center;
