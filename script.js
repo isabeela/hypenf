@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var formData = new FormData(this);
     formData.append('salario', salario);
     formData.append('projetos', projetos.join(','));
+    formData.append('mes', mes);
 
     fetch('https://hype-nf-hypeadm.replit.app/upload', {
       method: 'POST',
