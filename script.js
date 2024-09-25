@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var nome = document.getElementById('nome').value;
     var email = document.getElementById('email').value;
     var salario = document.getElementById('salario').value;
+    var mes = docuemnt.getElementById('mes').value;
     const checkboxes = document.querySelectorAll('input[type="checkbox"][name="projeto"]:checked');
     const projetos = Array.from(checkboxes).map(checkbox => checkbox.value);
 

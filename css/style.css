@@ -41,13 +41,17 @@ label {
     margin-bottom: 0.5rem;
 }
 
-input {
+input, select{
     padding: 0.5rem;
     font-size: 16px;
     margin-bottom: 1rem;
     border: 1px solid #c0c0c0;
     border-radius: 5px;
     width: 90%;
+}
+
+select {
+    cursor: pointer;
 }
 
 button {
@@ -160,6 +164,10 @@ a:hover {
 #relatorio h2 {
   font-size: 1.2rem;
 }
+
+/* #salario {
+    width: 50%;
+} */
 
 .btn-relatorios {
     display: none;
