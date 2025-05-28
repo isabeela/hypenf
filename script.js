@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     formData.append('projetos', projetos.join(','));
     formData.append('mes', mes);
 
-    fetch('https://hype-nf-hypeadm.replit.app/upload', {
+    fetch('https://hype-nf.replit.app/upload', {
       method: 'POST',
       body: formData,
     })
