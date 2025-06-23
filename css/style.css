@@ -289,3 +289,35 @@ legend {
     font-family:  "Walter Turncoat", cursive;
     font-size: 1.2rem;
 }
+
+
+
+/*********** TABS ************/
+
+  .tabs {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin: 1em auto;
+  }
+
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  .tab.active {
+    border-bottom: 2px solid #0148b3;
+    color: #0148b3;
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
