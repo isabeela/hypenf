@@ -25,8 +25,13 @@
         </div>
 
 
-            <label>  Selecione o(s) projeto(s) ou setor no qual trabalha </label> <span> * </span>
-                <section class="checkbox-group" required id ="projeto">
+            <label>  Selecione o projeto ou setor no qual trabalha </label> <span> * </span>
+             <div class="tabs">
+                    <button class="tab active" onclick="showTab('projetos')">Projetos</button>
+                    <button class="tab" onclick="showTab('setores')">Setores</button>
+                </div>
+                <div id="projetos" class="tab-content active">
+                    <section class="checkbox-group">
 <!--                   <div class="checkbox">
                     <label class="checkbox-wrapper">
                         <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="arca_de_noé"/>
@@ -52,53 +57,53 @@
                     </label>
                 </div> -->
                     
-                  <div class="checkbox">
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" class="checkbox-input" name="projeto"  id="projeto" value="galinha_pintadinha_producao"/>
-                            <span class="checkbox-tile">
-                                <span class="checkbox-icon">
-                                    <img src="img/galinha.png" width="45px">
-                                </span>
-                                <span class="checkbox-label"> GPL </span>
-                            </span>
-                        </label>
-                    </div>
-
-                     <div class="checkbox">
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="kaia"/>
-                            <span class="checkbox-tile">
-                                <span class="checkbox-icon">
-                                    <img src="img/kaia.png" width="40px">
-                                </span>
-                                <span class="checkbox-label"> Kaia </span>
-                            </span>
-                        </label>
-                    </div>
-
                       <div class="checkbox">
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="saltimbancos"/>
-                            <span class="checkbox-tile">
-                                <span class="checkbox-icon">
-                                  <img src="img/icone-salti.png" width="60px">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox-input" name="projeto"  id="projeto" value="galinha_pintadinha_producao"/>
+                                <span class="checkbox-tile">
+                                    <span class="checkbox-icon">
+                                        <img src="img/galinha.png" width="45px">
+                                    </span>
+                                    <span class="checkbox-label"> GPL </span>
                                 </span>
-                              <span class="checkbox-label" style="font-size: 1rem;"> Saltimbancos </span>
-
-                            </span>
-                        </label>
-                    </div> 
-                    <div class="checkbox">
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="TAF"/>
-                            <span class="checkbox-tile">
-                                <span class="checkbox-icon">
-                                    <img src="img/taf.png" width="50px"> 
+                            </label>
+                        </div>
+    
+                         <div class="checkbox">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="kaia"/>
+                                <span class="checkbox-tile">
+                                    <span class="checkbox-icon">
+                                        <img src="img/kaia.png" width="40px">
+                                    </span>
+                                    <span class="checkbox-label"> Kaia </span>
                                 </span>
-                                <span class="checkbox-label"> Tainá Longa </span>
-                            </span>
-                        </label>
-                    </div>
+                            </label>
+                        </div>
+    
+                          <div class="checkbox">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="saltimbancos"/>
+                                <span class="checkbox-tile">
+                                    <span class="checkbox-icon">
+                                      <img src="img/icone-salti.png" width="60px">
+                                    </span>
+                                  <span class="checkbox-label" style="font-size: 1rem;"> Saltimbancos </span>
+    
+                                </span>
+                            </label>
+                        </div> 
+                        <div class="checkbox">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="TAF"/>
+                                <span class="checkbox-tile">
+                                    <span class="checkbox-icon">
+                                        <img src="img/taf.png" width="50px"> 
+                                    </span>
+                                    <span class="checkbox-label"> Tainá Longa </span>
+                                </span>
+                            </label>
+                        </div>
 
 <!--                      <div class="checkbox">
                         <label class="checkbox-wrapper">
@@ -113,136 +118,136 @@
                     </div> -->
 
 
-                    <div class="checkbox">
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="talking_tom_shorts"/>
-                            <span class="checkbox-tile">
-                                <span class="checkbox-icon">
-                                    <img src="img/tom.png">
-                                </span>
-                                <span class="checkbox-label"> Talking </span>
-                            </span>
-                        </label>
-                    </div>
-
-                    <div class="checkbox">
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="todos_estao_mortos"/>
-                            <span class="checkbox-tile">
-                                <span class="checkbox-icon">
-                                    <img src="img/tem.png">
-                                </span>
-                                <span class="checkbox-label"> TEM </span>
-                            </span>
-                        </label>
-                    </div>
-
-
+                            <div class="checkbox">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="talking_tom_shorts"/>
+                                    <span class="checkbox-tile">
+                                        <span class="checkbox-icon">
+                                            <img src="img/tom.png">
+                                        </span>
+                                        <span class="checkbox-label"> Talking </span>
+                                    </span>
+                                </label>
+                            </div>
     
-                    <div class="checkbox">
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="financeiro"/>
-                            <span class="checkbox-tile">
-                                <span class="checkbox-icon">
-                                   <img src="img/financeiro.png">
-                                </span>
-                                <span class="checkbox-label"> Financeiro </span>
-                            </span>
-                        </label>
-                    </div>
-    
+                            <div class="checkbox">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="todos_estao_mortos"/>
+                                    <span class="checkbox-tile">
+                                        <span class="checkbox-icon">
+                                            <img src="img/tem.png">
+                                        </span>
+                                        <span class="checkbox-label"> TEM </span>
+                                    </span>
+                                </label>
+                            </div>
+                    </section>
+                </div>
 
-
-
-                    <div class="checkbox">
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="gestao"/>
-                            <span class="checkbox-tile">
-                                <span class="checkbox-icon">
-                                   <img src="img/projetor.png">
-                                </span>
-                                <span class="checkbox-label"> Gestão </span>
-                            </span>
-                        </label>
-                    </div>
-
-                     <div class="checkbox">
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="hype_lab"/>
-                            <span class="checkbox-tile">
-                                <span class="checkbox-icon">
-                                   <img src="img/logo-hype.png">
-                                </span>
-                                <span class="checkbox-label"> Hype LAB </span>
-                            </span>
-                        </label>
-                    </div>
-                   
-                   
-                  
-
-                    <div class="checkbox">
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="marketing"/>
-                            <span class="checkbox-tile">
-                                <span class="checkbox-icon">
-                                    <img src="img/mkt.png" width="40px">
-                                </span>
-                                <span class="checkbox-label"> Marketing </span>
-                            </span>
-                        </label>
-                    </div>
-                    
-                   
-                    <div class="checkbox">
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="people_and_culture"/>
-                            <span class="checkbox-tile">
-                                <span class="checkbox-icon">
-                                    <img src="img/people.png">
-                                </span>
-                                <span class="checkbox-label"> People </span>
-                            </span>
-                        </label>
-                    </div>
-
-                    <div class="checkbox">
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="pipeline"/>
-                            <span class="checkbox-tile">
-                                <span class="checkbox-icon">
-                                  <img src="img/pato.png" width="50px">
-                                </span>
-                                <span class="checkbox-label"> Pipeline </span>
-                            </span>
-                        </label>
-                    </div>
-
-                   
-                    <div class="checkbox">
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="TI"/>
-                            <span class="checkbox-tile">
-                                <span class="checkbox-icon">
-                                    <img src="img/ti.png">
-                                </span>
-                                <span class="checkbox-label"> TI </span>
-                            </span>
-                        </label>
-                    </div>
-
-                     <div class="checkbox">
-                        <label class="checkbox-wrapper">
-                            <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="outros serviços"/>
-                            <span class="checkbox-tile">
-                                <span class="checkbox-icon">
-                                    <img src="img/outros.png">
-                                </span>
-                                <span class="checkbox-label"> Outros Serviços </span>
-                            </span>
-                        </label>
-                     </div>
-                </section>
+    <!-- SETORES -->
+             <div id="setores" class="tab-content">
+                        <section class="checkbox-group">
+                            <div class="checkbox">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="financeiro"/>
+                                    <span class="checkbox-tile">
+                                        <span class="checkbox-icon">
+                                           <img src="img/financeiro.png">
+                                        </span>
+                                        <span class="checkbox-label"> Financeiro </span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="gestao"/>
+                                    <span class="checkbox-tile">
+                                        <span class="checkbox-icon">
+                                           <img src="img/projetor.png">
+                                        </span>
+                                        <span class="checkbox-label"> Gestão </span>
+                                    </span>
+                                </label>
+                            </div>
+        
+                             <div class="checkbox">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="hype_lab"/>
+                                    <span class="checkbox-tile">
+                                        <span class="checkbox-icon">
+                                           <img src="img/logo-hype.png">
+                                        </span>
+                                        <span class="checkbox-label"> Hype LAB </span>
+                                    </span>
+                                </label>
+                            </div>
+                           
+                           
+                          
+        
+                            <div class="checkbox">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="marketing"/>
+                                    <span class="checkbox-tile">
+                                        <span class="checkbox-icon">
+                                            <img src="img/mkt.png" width="40px">
+                                        </span>
+                                        <span class="checkbox-label"> Marketing </span>
+                                    </span>
+                                </label>
+                            </div>
+                            
+                           
+                            <div class="checkbox">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="people_and_culture"/>
+                                    <span class="checkbox-tile">
+                                        <span class="checkbox-icon">
+                                            <img src="img/people.png">
+                                        </span>
+                                        <span class="checkbox-label"> People </span>
+                                    </span>
+                                </label>
+                            </div>
+        
+                            <div class="checkbox">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="pipeline"/>
+                                    <span class="checkbox-tile">
+                                        <span class="checkbox-icon">
+                                          <img src="img/pato.png" width="50px">
+                                        </span>
+                                        <span class="checkbox-label"> Pipeline </span>
+                                    </span>
+                                </label>
+                            </div>
+        
+                           
+                            <div class="checkbox">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="TI"/>
+                                    <span class="checkbox-tile">
+                                        <span class="checkbox-icon">
+                                            <img src="img/ti.png">
+                                        </span>
+                                        <span class="checkbox-label"> TI </span>
+                                    </span>
+                                </label>
+                            </div>
+        
+                             <div class="checkbox">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="outros serviços"/>
+                                    <span class="checkbox-tile">
+                                        <span class="checkbox-icon">
+                                            <img src="img/outros.png">
+                                        </span>
+                                        <span class="checkbox-label"> Outros Serviços </span>
+                                    </span>
+                                </label>
+                             </div>
+                    </section>
+             </div>
 
                 <br>
 
@@ -303,6 +308,35 @@
         alert('Por favor, selecione pelo menos um projeto.');
     }
 });
+
+    function showTab(id) {
+    // Ativar conteúdo da aba
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+
+    // Ativar aba no topo
+    document.querySelectorAll('.tab').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    const clickedTab = Array.from(document.querySelectorAll('.tab')).find(btn => btn.textContent.toLowerCase().includes(id));
+    if (clickedTab) clickedTab.classList.add('active');
+  }
+
+
+
+const allCheckboxes = document.querySelectorAll('.checkbox-input');
+
+  allCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        allCheckboxes.forEach((cb) => {
+          if (cb !== checkbox) cb.checked = false;
+        });
+      }
+    });
+  });
 
 
 </script>
