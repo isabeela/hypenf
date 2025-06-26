@@ -1,0 +1,133 @@
+ @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+        
+        :root {
+            --primary-color: #F04E62;
+            --secondary-color: #f5f7fa;
+            --text-color: #333;
+            --light-text-color: #777;
+            --border-color: #dce1e6;
+            --background-color: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .calculator-container {
+            background-color: var(--background-color);
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px var(--shadow-color);
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 2.2em; /* Título maior */
+        }
+
+        .description {
+            color: var(--light-text-color);
+            margin-bottom: 30px;
+            font-size: 0.9em; /* Subtítulo menor */
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 400;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        input[type="month"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(240, 78, 98, 0.2);
+        }
+
+        input:disabled {
+            background-color: #e9ecef;
+            cursor: not-allowed;
+        }
+
+        .date-group {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .date-group .input-group {
+            flex: 1;
+        }
+
+        .result-container {
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .result-container h2 {
+            margin: 0 0 10px;
+            font-size: 1.1em;
+            font-weight: 400;
+            color: var(--light-text-color);
+        }
+
+        #result-display {
+            font-size: 2.5em;
+            font-weight: 600;
+            color: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #result-display .currency {
+            font-size: 0.6em;
+            margin-right: 5px;
+            align-self: flex-start;
+            margin-top: 10px;
+        }
+
+        #calculation-details {
+            margin-top: 15px;
+            font-size: 0.8em;
+            color: var(--light-text-color);
+            min-height: 1.2em; 
+        }
