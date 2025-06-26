@@ -107,6 +107,15 @@
             color: var(--light-text-color);
         }
 
+         .btn-back {
+          margin: 20px auto;
+          border: none;
+          background-color: #021a3d;
+          color: #fff;
+          border-radius: 5px;
+          padding: 10px 15px;
+       }
+
         #result-display {
             font-size: 2.5em;
             font-weight: 600;
@@ -131,11 +140,4 @@
         }
 
 
-       .btn-back {
-        margin: 20px auto;
-        border: none;
-        background-color: #021a3d;
-        color: #fff;
-        border-radius: 5px;
-        padding: 15px;
-       }
+     
