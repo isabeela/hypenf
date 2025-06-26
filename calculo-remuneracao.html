@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Remuneração</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/remuneracao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        
+        <h1>Calculadora de Remuneração</h1>
+        <p class="description">Calcule seu salário para um período específico dentro de um mês.</p>
+        
+        <div class="input-group">
+            <label for="month-year-input">1. Selecione o Mês</label>
+            <input type="month" id="month-year-input">
+        </div>
+        
+        <div class="input-group">
+            <label for="base-salary-input">2. Digite o Salário Mensal Bruto</label>
+            <input type="number" id="base-salary-input" placeholder="ex: 5000" min="0">
+        </div>
+        
+        <div class="date-group">
+            <div class="input-group">
+                <label for="start-date-input">3. Selecione a Data de Início</label>
+                <input type="date" id="start-date-input" disabled>
+            </div>
+            <div class="input-group">
+                <label for="end-date-input">4. Selecione a Data Final</label>
+                <input type="date" id="end-date-input" disabled>
+            </div>
+        </div>
+        
+        <div class="result-container">
+            <h2>Salário Calculado</h2>
+            <div id="result-display">
+                <span class="currency">R$</span>
+                <span id="result-amount">0,00</span>
+            </div>
+            <p id="calculation-details"></p>
+        </div>
+    </div>
+
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', () => {
+            const monthYearInput = document.getElementById('month-year-input');
+            const baseSalaryInput = document.getElementById('base-salary-input');
+            const startDateInput = document.getElementById('start-date-input');
+            const endDateInput = document.getElementById('end-date-input');
+            const resultAmount = document.getElementById('result-amount');
+            const calculationDetails = document.getElementById('calculation-details');
+
+            const allInputs = [monthYearInput, baseSalaryInput, startDateInput, endDateInput];
+            allInputs.forEach(input => {
+                input.addEventListener('input', calculateSalary);
+            });
+
+            monthYearInput.addEventListener('change', handleMonthChange);
+
+            function handleMonthChange() {
+                const monthYear = monthYearInput.value;
+                if (!monthYear) {
+                    disableDateInputs();
+                    return;
+                }
+
+                const [year, month] = monthYear.split('-').map(Number);
+                
+                const firstDay = new Date(year, month - 1, 1);
+                const lastDay = new Date(year, month, 0); 
+                
+                const firstDayStr = formatDate(firstDay);
+                const lastDayStr = formatDate(lastDay);
+
+                startDateInput.min = firstDayStr;
+                startDateInput.max = lastDayStr;
+                startDateInput.disabled = false;
+                
+                endDateInput.min = firstDayStr;
+                endDateInput.max = lastDayStr;
+                endDateInput.disabled = false;
+
+                // Reset date values if they are out of the new range
+                if (!isDateInRange(startDateInput.value, firstDay, lastDay)) {
+                    startDateInput.value = '';
+                }
+                if (!isDateInRange(endDateInput.value, firstDay, lastDay)) {
+                    endDateInput.value = '';
+                }
+
+                calculateSalary();
+            }
+            
+            function calculateSalary() {
+                const baseSalary = parseFloat(baseSalaryInput.value);
+                const monthYear = monthYearInput.value;
+                const startDateStr = startDateInput.value;
+                const endDateStr = endDateInput.value;
+
+                if (!baseSalary || !monthYear || !startDateStr || !endDateStr || baseSalary <= 0) {
+                    resetResult('Por favor, preencha todos os campos.');
+                    return;
+                }
+
+                const [year, month] = monthYear.split('-').map(Number);
+                const lastDayOfMonth = new Date(year, month, 0).getDate();
+
+                // Correct for timezone issues by creating dates in UTC
+                const startDate = new Date(startDateStr + 'T00:00:00');
+                const endDate = new Date(endDateStr + 'T00:00:00');
+
+                if (endDate < startDate) {
+                    resetResult('A data final não pode ser anterior à data de início.');
+                    return;
+                }
+
+                // Add 1 to include both start and end dates in the count
+                const workedDays = (endDate.getTime() - startDate.getTime()) / (1000 * 3600 * 24) + 1;
+                const dailyRate = baseSalary / lastDayOfMonth;
+                const proratedSalary = dailyRate * workedDays;
+
+                displayResult(proratedSalary, dailyRate, workedDays);
+            }
+            
+            function displayResult(salary, dailyRate, workedDays) {
+                resultAmount.textContent = salary.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                calculationDetails.textContent = 
+                    `Baseado em ${workedDays} dia(s) a uma taxa de R$ ${dailyRate.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}/dia.`;
+            }
+
+            function resetResult(message) {
+                resultAmount.textContent = '0,00';
+                calculationDetails.textContent = message;
+            }
+
+            function disableDateInputs() {
+                startDateInput.disabled = true;
+                endDateInput.disabled = true;
+                startDateInput.value = '';
+                endDateInput.value = '';
+            }
+
+            function formatDate(date) {
+                // Returns date in<y_bin_378>-MM-DD format
+                return date.toISOString().split('T')[0];
+            }
+            
+            function isDateInRange(dateStr, minDate, maxDate) {
+                if (!dateStr) return false;
+                const checkDate = new Date(dateStr + 'T00:00:00');
+                // Create min and max as UTC to compare correctly
+                const min = new Date(minDate.getUTCFullYear(), minDate.getUTCMonth(), minDate.getUTCDate());
+                const max = new Date(maxDate.getUTCFullYear(), maxDate.getUTCMonth(), maxDate.getUTCDate());
+                return checkDate >= min && checkDate <= max;
+            }
+
+            // Initialize
+            resetResult('Selecione um mês para começar.');
+        });
+    </script>
+</body>
+</html>
