@@ -338,8 +338,18 @@
      
 </form>
 
-    
+<section id="avisonf">
 
+    <div class="overlay" id="modal">
+      <div class="popup">
+        <h2> OOPS</h2>
+        <p> Prazo para envio encerrado</p>
+        <img src="https://media.tenor.com/d0e7bTwsY_EAAAAi/pengu-pudgy.gif" width="65%">
+        <p> Favor acionar o time do financeiro </p>
+      </div>
+    </div>
+</section>
+    
   <script src="script.js"></script>
 
   <script>
@@ -391,6 +401,32 @@ const allCheckboxes = document.querySelectorAll('.checkbox-input');
     });
   });
 
+      document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+      e.preventDefault();
+    }
+  });
+
+  // Impede clique fora
+  document.getElementById("modal").addEventListener("click", e => {
+    e.stopPropagation();
+  });
+
+  function controlarPopup() {
+    const hoje = new Date();
+    const dia = hoje.getDate();
+
+    if (dia === 2) {
+      // esconde o popup no dia 1
+      document.getElementById("modal").style.display = "none";
+    } else {
+      // mostra o popup nos outros dias
+      document.getElementById("modal").style.display = "flex";
+    }
+  }
+
+  controlarPopup(); // executa ao carregar a página
+  setInterval(controlarPopup, 60000); // re-checagem a cada 1 minuto
 
 </script>
 
