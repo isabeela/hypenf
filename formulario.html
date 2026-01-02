@@ -168,7 +168,7 @@
                                 </label>
                             </div>
 
-                         <div class="checkbox">
+                         <!-- <div class="checkbox">
                                 <label class="checkbox-wrapper">
                                     <input type="checkbox" class="checkbox-input" name="projeto" id="projeto" value="festa_final_ano"/>
                                     <span class="checkbox-tile">
@@ -178,7 +178,7 @@
                                         <span class="checkbox-label"> Final de ano  </span>
                                     </span>
                                 </label>
-                            </div>
+                            </div> -->
     
                             <!-- <div class="checkbox">
                                 <label class="checkbox-wrapper">
@@ -338,7 +338,7 @@
      
 </form>
 
-<!-- <section id="avisonf">
+ <section id="avisonf">
 
     <div class="overlay" id="modal">
       <div class="popup">
@@ -349,7 +349,7 @@
       </div>
     </div>
 </section>
-     -->
+     
   <script src="script.js"></script>
 
   <script>
@@ -401,32 +401,32 @@ const allCheckboxes = document.querySelectorAll('.checkbox-input');
     });
   });
 
-  //     document.addEventListener("keydown", e => {
-  //   if (e.key === "Escape") {
-  //     e.preventDefault();
-  //   }
-  // });
+      document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+      e.preventDefault();
+    }
+  });
 
-  // Impede clique fora
-  // document.getElementById("modal").addEventListener("click", e => {
-  //   e.stopPropagation();
-  // });
+  Impede clique fora
+  document.getElementById("modal").addEventListener("click", e => {
+    e.stopPropagation();
+  });
 
-  // function controlarPopup() {
-  //   const hoje = new Date();
-  //   const dia = hoje.getDate();
+  function controlarPopup() {
+    const hoje = new Date();
+    const dia = hoje.getDate();
 
-  //   if (dia === 1) {
-  //     // esconde o popup no dia 1
-  //     document.getElementById("modal").style.display = "none";
-  //   } else {
-  //     // mostra o popup nos outros dias
-  //     document.getElementById("modal").style.display = "flex";
-  //   }
-  // }
+    if (dia === 1) {
+      // esconde o popup no dia 1
+      document.getElementById("modal").style.display = "none";
+    } else {
+      // mostra o popup nos outros dias
+      document.getElementById("modal").style.display = "flex";
+    }
+  }
 
-  // controlarPopup(); // executa ao carregar a página
-  // setInterval(controlarPopup, 60000); // re-checagem a cada 1 minuto
+  controlarPopup(); // executa ao carregar a página
+  setInterval(controlarPopup, 60000); // re-checagem a cada 1 minuto
 
 </script>
 
