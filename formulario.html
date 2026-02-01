@@ -389,23 +389,23 @@
 
 
 
-const allCheckboxes = document.querySelectorAll('.checkbox-input');
+// const allCheckboxes = document.querySelectorAll('.checkbox-input');
 
-  allCheckboxes.forEach((checkbox) => {
-    checkbox.addEventListener('change', () => {
-      if (checkbox.checked) {
-        allCheckboxes.forEach((cb) => {
-          if (cb !== checkbox) cb.checked = false;
-        });
-      }
-    });
-  });
+//   allCheckboxes.forEach((checkbox) => {
+//     checkbox.addEventListener('change', () => {
+//       if (checkbox.checked) {
+//         allCheckboxes.forEach((cb) => {
+//           if (cb !== checkbox) cb.checked = false;
+//         });
+//       }
+//     });
+//   });
 
-      document.addEventListener("keydown", e => {
-    if (e.key === "Escape") {
-      e.preventDefault();
-    }
-  });
+//       document.addEventListener("keydown", e => {
+//     if (e.key === "Escape") {
+//       e.preventDefault();
+//     }
+//   });
 
   // Impede clique fora
   // document.getElementById("modal").addEventListener("click", e => {
