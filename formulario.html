@@ -338,7 +338,7 @@
      
 </form>
 
- <!-- <section id="avisonf">
+ <section id="avisonf">
 
     <div class="overlay" id="modal">
       <div class="popup">
@@ -348,7 +348,7 @@
         <p> Favor acionar o time do financeiro </p>
       </div>
     </div>
-</section> -->
+</section>
      
   <script src="script.js"></script>
 
@@ -412,21 +412,21 @@ const allCheckboxes = document.querySelectorAll('.checkbox-input');
     e.stopPropagation();
   });
 
-  // function controlarPopup() {
-  //   const hoje = new Date();
-  //   const dia = hoje.getDate();
+  function controlarPopup() {
+    const hoje = new Date();
+    const dia = hoje.getDate();
 
-  //   if (dia === 1) {
-  //     // esconde o popup no dia 1
-  //     document.getElementById("modal").style.display = "none";
-  //   } else {
-  //     // mostra o popup nos outros dias
-  //     document.getElementById("modal").style.display = "flex";
-  //   }
-  // }
+    if (dia === 1) {
+      // esconde o popup no dia 1
+      document.getElementById("modal").style.display = "none";
+    } else {
+      // mostra o popup nos outros dias
+      document.getElementById("modal").style.display = "flex";
+    }
+  }
 
-  // controlarPopup(); // executa ao carregar a página
-  // setInterval(controlarPopup, 60000); // re-checagem a cada 1 minuto
+  controlarPopup(); // executa ao carregar a página
+  setInterval(controlarPopup, 60000); // re-checagem a cada 1 minuto
 
 </script>
 
