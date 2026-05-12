@@ -428,6 +428,12 @@ const allCheckboxes = document.querySelectorAll('.checkbox-input');
   // controlarPopup(); // executa ao carregar a página
   // setInterval(controlarPopup, 60000); // re-checagem a cada 1 minuto
 
+     
+  document.getElementById("nome").addEventListener("input", function () {
+    this.value = this.value.replace(/[^A-Za-zÀ-ÿ\s]/g, '');
+});
+
+
 </script>
 
 
