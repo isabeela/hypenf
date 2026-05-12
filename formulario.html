@@ -359,7 +359,7 @@
     campoNome.addEventListener("keydown", function(e) {
     
         // Caracteres especiais bloqueados
-        const especiais = /[@!#$%^&*()+=\[\]{};:'"\\|,.<>\/?]/;
+        const especiais = /[0-9@!#$%^&*()+=\[\]{};:'"\\|,.<>\/?]/;
     
         if (especiais.test(e.key)) {
             e.preventDefault();
